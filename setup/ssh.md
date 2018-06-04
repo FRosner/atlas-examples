@@ -49,7 +49,7 @@ resource "aws_instance" "app_server" {
   count = 1
   ami = "ami-408c7f28"
   instance_type = "t1.micro"
-  security_groups = ["${aws_security_group.allow_ssh.id}"]
+  security_groups = ["${aws_security_group.allow_ssh.name}"]
   key_name = "${aws_key_pair.debugging.key_name}"
 }
 ```
